@@ -32,7 +32,7 @@ export default class Redis {
     const key = await this.createUniqueKey()
     const res = await this.client.set(key, url)
     this.client.disconnect() // don't wait to close connection, get the user their link back ASAP
-    return res;
+    return key;
   }
 
 }

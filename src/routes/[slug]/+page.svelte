@@ -2,7 +2,6 @@
     import { browser } from "$app/environment";
   import type { PageData } from "./$types";
 
-
   export let data: PageData;
 
   if (browser && data.url) {
@@ -11,6 +10,4 @@
 </script>
 
 
-<h1>Should redirect</h1>
-
-{data.url}
+<h1>If you've got javascript disabled, this won't redirect.</h1>

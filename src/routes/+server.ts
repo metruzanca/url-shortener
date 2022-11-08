@@ -21,5 +21,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
   console.log(`${body.url} --> ${short}`);
   
-  return new Response('');
+  return new Response(JSON.stringify({
+    slug: short
+  }));
 }
